@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const authRoutes = require("./routes/authRouter");
 const roomRoutes = require("./routes/roomRouter");
 const eventRoutes = require("./routes/eventRouter");
+const roomEventRoutes = require("./routes/roomEventRouter");
 
 dotenv.config();
 
@@ -50,6 +51,7 @@ app.get("/", (req, res) => {
 app.use("/auth", authRoutes);
 app.use("/room", roomRoutes);
 app.use("/event", eventRoutes);
+app.use("/roomEvent", roomEventRoutes);
 
 //start server
 app.listen(PORT, () => {
