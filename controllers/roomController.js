@@ -31,7 +31,7 @@ const joinRoom = async (req, res) => {
 
 };
 
-const retreiveUsersInRoom = async (req, res) => {
+const showUserNameInRoom = async (req, res) => {
     const { roomID } = req.body;
 
     const owner = await Room.findOne({ roomID });
@@ -67,5 +67,5 @@ const retreiveUsersInRoom = async (req, res) => {
 module.exports = {
     createNewRoom,
     joinRoom,
-    retreiveUsersInRoom
+    showUserNameInRoom
 }
